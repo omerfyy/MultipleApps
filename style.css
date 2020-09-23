@@ -2,10 +2,16 @@
 
 *{
     margin: 0;
-    padding: 0;   
+    padding: 0;  
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
+
 body{
-    background-image: url(/WeatherApp/images/background-image.jpg);
+    background-image: url(/MultipleApps/images/background-image.jpg);
 }
 
 ul{
@@ -13,12 +19,19 @@ ul{
     justify-content: center;
     
 }
-
+.title-landingpage{
+    top: 90px;
+    position: relative;
+    text-align: center;
+    color:  rgb(190, 182, 182);
+    font-family: 'Baloo Tammudu 2', cursive;
+}
 .navigation-list{
     display: flex;
-    position: fixed;
+    position: absolute;
     list-style-type: none;
-    margin-top: 5%;
+    margin-top: 0;
+    top: 0;
     
 }
 
@@ -34,10 +47,15 @@ ul{
     align-items: center;
     background: rgb(1,20,48);
     background: radial-gradient(circle, rgba(1,20,48,0.3449754901960784) 0%, rgba(27,163,189,0.5494572829131652) 100%);
+    transition: all .5s;
 }
 
 .navigation-item:hover{
     cursor: pointer;
+    background: rgb(1,20,48);
+    background: radial-gradient(circle, rgba(1,20,48,0.3449754901960784) 0%, rgba(11, 66, 77, 0.549) 100%);
+    transform: scale(1.02);
+    
 }
 
 /* Slideshow images */
@@ -53,12 +71,22 @@ img{
     object-fit: cover;
     max-width: 70vw;
     max-height: 50vh;
+    
+    
 }
 .slideshow-container {
   max-width: 1000px;
-  position: relative;
+  position: absolute;
   top: 140vh;
-  margin: auto;
+  margin-left: auto; 
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 70%; 
+  
+ 
+  
+
 }
 
 .mySlides {
@@ -119,9 +147,16 @@ img{
 }
 
 .weather{
-    top: 140vh;
+    top: 190vh;
     position: relative;
     text-align: center;
     font-family: 'Baloo Tammudu 2', cursive;
     color:  rgb(190, 182, 182);
 }
+
+/* Responsive */
+
+@media only screen and (max-width:580px) {
+  .navigation-list {flex-direction: column;
+  align-items: center;
+}.title-landingpage {top: 80vh;}}
