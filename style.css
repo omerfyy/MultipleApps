@@ -1,0 +1,127 @@
+/* Landing Page */
+
+*{
+    margin: 0;
+    padding: 0;   
+}
+body{
+    background-image: url(/WeatherApp/images/background-image.jpg);
+}
+
+ul{
+    width: 100vw;
+    justify-content: center;
+    
+}
+
+.navigation-list{
+    display: flex;
+    position: fixed;
+    list-style-type: none;
+    margin-top: 5%;
+    
+}
+
+.navigation-item{
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px rgb(190, 182, 182) solid;
+    width: fit-content;
+    min-width: 2rem;
+    min-height: 2rem;
+    justify-content: center;
+    align-items: center;
+    background: rgb(1,20,48);
+    background: radial-gradient(circle, rgba(1,20,48,0.3449754901960784) 0%, rgba(27,163,189,0.5494572829131652) 100%);
+}
+
+.navigation-item:hover{
+    cursor: pointer;
+}
+
+/* Slideshow images */
+
+.title-slideshow{
+    top: 135vh;
+    position: relative;
+    text-align: center;
+    color:  rgb(190, 182, 182);
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+img{
+    object-fit: cover;
+    max-width: 70vw;
+    max-height: 50vh;
+}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  top: 140vh;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 1.5em;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  font-family: 'Baloo Tammudu 2', cursive;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.weather{
+    top: 140vh;
+    position: relative;
+    text-align: center;
+    font-family: 'Baloo Tammudu 2', cursive;
+    color:  rgb(190, 182, 182);
+}
